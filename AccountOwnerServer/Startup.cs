@@ -56,6 +56,8 @@ namespace AccountOwnerServer
                 ForwardedHeaders = ForwardedHeaders.All
             });
 
+            app.ConfigureCustomExceptionMiddleware();
+
             app.UseRouting();
 
             app.UseAuthorization();

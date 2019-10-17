@@ -1,0 +1,19 @@
+2019-10-17 11:24:42.8848 INFO Here is info Message
+2019-10-17 11:24:42.9706 WARN Here is debug Message
+2019-10-17 11:24:42.9817 ERROR Here is error Message
+2019-10-17 11:24:42.9936 WARN Here is warn Message
+2019-10-17 11:24:58.2304 INFO Fetching all owners from the DB
+2019-10-17 11:24:59.3127 ERROR Something went wrong: System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at Repository.OwnerRepository.GetOwnerByIdAsync(Guid ownerId) in C:\Users\mazar\RiderProjects\CodeMazeTutorial\Repository\OwnerRepository.cs:line 19
+   at AccountOwnerServer.Controllers.OwnerController.GetAllOwners() in C:\Users\mazar\RiderProjects\CodeMazeTutorial\AccountOwnerServer\Controllers\OwnerController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at AccountOwnerServer.CustomMiddlewares.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\mazar\RiderProjects\CodeMazeTutorial\AccountOwnerServer\CustomMiddlewares\ExceptionMiddleware.cs:line 27

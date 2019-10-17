@@ -16,7 +16,8 @@ namespace Repository
 
         public async Task<Owner> GetOwnerByIdAsync(Guid ownerId)
         {
-            return await GetSingleOrDefaultAsync(x => x.OwnerId == ownerId);
+            return await GetSingleOrDefaultAsync(x => x.OwnerId == ownerId) 
+                ?? throw new KeyNotFoundException();
         }
 
         

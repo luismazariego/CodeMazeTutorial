@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Contracts;
 using Microsoft.AspNetCore.Mvc;
@@ -21,16 +22,27 @@ namespace AccountOwnerServer.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllOwners()
         {
-            try
-            {
-                var owners = await _repositoryWrapper.Owner.GetAllAsync();
-                return Ok(owners);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Some error in the GetAllOwners method: {ex}");
-                return StatusCode(500, "Internal server error");
-            }
+            //try
+            //{
+            //    var owners = await _repositoryWrapper.Owner.GetAllAsync();
+            //    return Ok(owners);
+            //}
+            //catch (Exception ex)
+            //{
+            //    _logger.LogError($"Some error in the GetAllOwners method: {ex}");
+            //    return StatusCode(500, "Internal server error");
+            //}
+            _logger.LogInfo("Fetching all owners from the DB");
+
+            var owners = await _repositoryWrapper.Owner.GetOwnerByIdAsync(Guid.NewGuid());
+
+            _logger.LogInfo($"Returning {owners.Name}.");
+
+            return Ok(owners);
+
+            throw new Exception("Exception while fetching all the students from the storage.");
+
+            
         }
     }
 }
