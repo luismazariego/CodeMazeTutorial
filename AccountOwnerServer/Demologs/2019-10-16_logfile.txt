@@ -1,0 +1,8 @@
+2019-10-16 17:21:10.6694 INFO Here is info Message
+2019-10-16 17:21:10.7413 WARN Here is debug Message
+2019-10-16 17:21:10.7413 ERROR Here is error Message
+2019-10-16 17:21:10.7413 WARN Here is warn Message
+2019-10-16 17:26:43.5154 INFO Here is info Message
+2019-10-16 17:26:58.5777 WARN Here is debug Message
+2019-10-16 17:27:00.6243 ERROR Here is error Message
+2019-10-16 17:27:02.5153 WARN Here is warn Message
